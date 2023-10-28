@@ -21,5 +21,25 @@
             <button type="submit">Login</button>
         </form>
     </div>
+    
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const username = form.elements.username.value;
+            const password = form.elements.password.value;
+
+            if (username === "seu_usuario" && password === "sua_senha") {
+                alert("Login bem-sucedido!");
+
+            } else {
+                alert("Credenciais inválidas. Tente novamente.");
+            }
+        });
+    });
+</script>
 </body>
 </html>
